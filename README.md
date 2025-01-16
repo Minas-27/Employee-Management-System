@@ -1,27 +1,27 @@
-# Employee Management System
+# **Employee Management System**
 
-A Java-based GUI application for managing employee records efficiently. The application provides features such as adding, viewing, searching, updating, and deleting employee details. Built using Java Swing, this project is beginner-friendly and focuses on modular design with separate classes for each functionality.
-
----
-
-## Features
-- Add Employee: Add a new employee with details like name, age, and department.
-- View Employees: Display a list of all employees in the system.
-- Search Employee: Search for a specific employee by their ID.
-- Update Employee: Update details of an existing employee.
-- Delete Employee: Remove an employee from the system.
-- User-Friendly Interface: Easy-to-use buttons and text fields designed with Java Swing.
+A Java-based GUI application for managing employee records efficiently. The application provides features such as adding, viewing, searching, updating, and deleting employee details. Built using **Java Swing**, this project is beginner-friendly and focuses on modular design with separate classes for each functionality.
 
 ---
 
-## Technologies Used
-- Java: Core language for building the application.
-- Swing: GUI framework for creating a desktop application.
-- IDE: IntelliJ IDEA or Eclipse for development.
+## **Features**
+- **Add Employee:** Add a new employee with details like name, age, and department.
+- **View Employees:** Display a list of all employees in the system.
+- **Search Employee:** Search for a specific employee by their ID.
+- **Update Employee:** Update details of an existing employee.
+- **Delete Employee:** Remove an employee from the system.
+- **User-Friendly Interface:** Easy-to-use buttons and text fields designed with Java Swing.
 
 ---
 
-## Getting Started
+## **Technologies Used**
+- **Java:** Core language for building the application.
+- **Swing:** GUI framework for creating a desktop application.
+- **IDE:** IntelliJ IDEA or Eclipse for development.
+
+---
+
+## **Getting Started**
 
 ### Prerequisites
 Ensure you have the following installed on your system:
@@ -58,29 +58,44 @@ Employee Management System
 
 ---
 
-## How to Use
-1. **Launch the Application**:
+## **How to Use**
+1. Launch the Application:
    - Run the `Main.java` file in your IDE.
-2. **Use the Sidebar**:
+2. **Use the Sidebar:**
    - Navigate through the app by clicking the buttons on the left sidebar:
-     - *View Employees*: See all employee records.
-     - *Add Employee*: Add a new employee to the system.
-     - *Search Employee*: Look up an employee by their unique ID.
-     - *Update Employee*: Modify employee details.
-     - *Delete Employee*: Remove an employee record.
+     - **View Employees:** See all employee records.
+     - **Add Employee:** Add a new employee to the system.
+     - **Search Employee:** Look up an employee by their unique ID.
+     - **Update Employee:** Modify employee details.
+     - **Delete Employee:** Remove an employee record.
 
 ---
 
 ## **Screenshots**
 
 ### **Main Application Interface**
-![Main Interface](https://via.placeholder.com/800x400?text=Main+Application+Interface)
+![Screenshot 2025-01-17 011217](https://github.com/user-attachments/assets/3ec5fed2-9a2e-4ff5-96cc-ca2b0b5cccfa)
 
 ### **Add Employee Panel**
-![Add Employee Panel](https://via.placeholder.com/800x400?text=Add+Employee+Panel)
+![Screenshot 2025-01-17 005403](https://github.com/user-attachments/assets/aedeac3b-b93e-4eeb-a657-fe38e5399c8e)
+![Screenshot 2025-01-17 005427](https://github.com/user-attachments/assets/6194bb4e-877d-486c-8c37-c8dacc614eda)
 
 ### **Search Employee Panel**
-![Search Employee Panel](https://via.placeholder.com/800x400?text=Search+Employee+Panel)
+![Screenshot 2025-01-17 010039](https://github.com/user-attachments/assets/34845cc0-9e83-4048-874e-b0aa76d9a64d)
+![Screenshot 2025-01-17 010109](https://github.com/user-attachments/assets/0923c87b-5809-4dda-a45b-60d1c1f599b0)
+
+### **View Employee Panel**
+![Screenshot 2025-01-17 005558](https://github.com/user-attachments/assets/d51c8336-868d-4e36-bf70-b9e71b56ca61)
+
+### **Update Employee Panel**
+![Screenshot 2025-01-17 010415](https://github.com/user-attachments/assets/ac54ee64-8315-436b-83bc-218b446e47c7)
+![Screenshot 2025-01-17 010522](https://github.com/user-attachments/assets/a17f0521-b254-4e8f-9cf5-6fe8e37bb4d5)
+![Screenshot 2025-01-17 010552](https://github.com/user-attachments/assets/4ace3598-2d1f-4c72-aca8-62c2675e0344)
+
+### **Delete Employee Panel**
+![Screenshot 2025-01-17 010810](https://github.com/user-attachments/assets/fcad82b9-5174-4ff0-ade9-bac3eec8df9f)
+![Screenshot 2025-01-17 010850](https://github.com/user-attachments/assets/882228a2-fe2e-42a3-85d8-74490bbc1d15)
+![Screenshot 2025-01-17 010953](https://github.com/user-attachments/assets/75088e4c-e0ee-4e15-8ccb-845b7d1e9954)
 
 ---
 
@@ -109,17 +124,15 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 ---
 
 ## **Acknowledgements**
-- [OpenAI ChatGPT](https://openai.com/chatgpt) for assistance in designing and structuring the project.
 - Java documentation for providing excellent resources for learning Swing and Java development.
 
 ---
 
 ## **Contact**
 For any questions or feedback, feel free to reach out:
-- **Email**: abrahamaddisu444@gmail.com  
-- **Phone**: 0963048258  
+- **Email**: abrahamaddisu217@gmail.com  
+- **Phone**: 0963048258
+-  **LinkedIn**: www.linkedin.com/in/abraham-addisu-b39b08338  
 - **GitHub Profile**: [Your GitHub Profile](https://github.com/yourusername)
 
 ---
-
-Would you like me to enhance this README further or add any specific details? Let me know!
