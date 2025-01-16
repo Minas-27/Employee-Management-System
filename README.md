@@ -133,6 +133,6 @@ For any questions or feedback, feel free to reach out:
 - **Email**: abrahamaddisu217@gmail.com  
 - **Phone**: 0963048258
 -  **LinkedIn**: www.linkedin.com/in/abraham-addisu-b39b08338  
-- **GitHub Profile**: [Your GitHub Profile](https://github.com/yourusername)
+- **GitHub Profile**: (https://github.com/Minas-27)
 
 ---
