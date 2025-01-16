@@ -1,14 +1,16 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Sidebar extends JPanel {
     public Sidebar(JFrame frame, EmployeeManager employeeManager) {
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setLayout(new GridLayout(5, 1, 10, 10));
+        setBackground(new Color(70, 130, 180));
 
-        JButton viewButton = new JButton("View Employees");
-        JButton addButton = new JButton("Add Employee");
-        JButton searchButton = new JButton("Search Employee");
-        JButton deleteButton = new JButton("Delete Employee");
-        JButton updateButton = new JButton("Update Employee");
+        JButton viewButton = createStyledButton("View Employees");
+        JButton addButton = createStyledButton("Add Employee");
+        JButton searchButton = createStyledButton("Search Employee");
+        JButton deleteButton = createStyledButton("Delete Employee");
+        JButton updateButton = createStyledButton("Update Employee");
 
         viewButton.addActionListener(e -> switchPanel(frame, new ViewPanel(employeeManager)));
         addButton.addActionListener(e -> switchPanel(frame, new AddPanel(employeeManager)));
@@ -23,11 +25,19 @@ public class Sidebar extends JPanel {
         add(updateButton);
     }
 
+    private JButton createStyledButton(String text) {
+        JButton button = new JButton(text);
+        button.setFocusPainted(false);
+        button.setBackground(new Color(100, 149, 237));
+        button.setForeground(Color.WHITE);
+        button.setFont(new Font("Arial", Font.BOLD, 14));
+        return button;
+    }
+
     private void switchPanel(JFrame frame, JPanel newPanel) {
         frame.getContentPane().removeAll();
-        frame.getContentPane().add(this);
-        frame.getContentPane().add(newPanel);
-        newPanel.setBounds(200, 0, 600, 600);
+        frame.getContentPane().add(this, BorderLayout.WEST);
+        frame.getContentPane().add(newPanel, BorderLayout.CENTER);
         frame.repaint();
         frame.revalidate();
     }

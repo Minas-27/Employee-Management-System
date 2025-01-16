@@ -1,27 +1,39 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class DeletePanel extends JPanel {
     public DeletePanel(EmployeeManager employeeManager) {
-        setLayout(null);
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JLabel deleteLabel = new JLabel("Enter name to delete:");
-        deleteLabel.setBounds(50, 50, 200, 30);
-        add(deleteLabel);
+        JLabel idLabel = new JLabel("Employee ID:");
+        JTextField idField = new JTextField();
+        JButton deleteButton = new JButton("Delete Employee");
 
-        JTextField deleteField = new JTextField();
-        deleteField.setBounds(250, 50, 200, 30);
-        add(deleteField);
+        deleteButton.setBackground(new Color(220, 20, 60));
+        deleteButton.setForeground(Color.WHITE);
+        deleteButton.setFont(new Font("Arial", Font.BOLD, 14));
 
-        JButton deleteButton = new JButton("Delete");
-        deleteButton.setBounds(470, 50, 100, 30);
-        add(deleteButton);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        add(idLabel, gbc);
+        gbc.gridx = 1;
+        add(idField, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        add(deleteButton, gbc);
 
         deleteButton.addActionListener(e -> {
-            String name = deleteField.getText();
-            if (employeeManager.deleteEmployee(name)) {
+            String id = idField.getText();
+            boolean success = employeeManager.deleteEmployeeById(id);
+            if (success) {
                 JOptionPane.showMessageDialog(this, "Employee deleted successfully!");
+                idField.setText("");
             } else {
-                JOptionPane.showMessageDialog(this, "No employee found with the name: " + name);
+                JOptionPane.showMessageDialog(this, "Employee not found!");
             }
         });
     }

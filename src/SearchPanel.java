@@ -1,39 +1,49 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class SearchPanel extends JPanel {
     public SearchPanel(EmployeeManager employeeManager) {
-        setLayout(null);
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JLabel searchLabel = new JLabel("Enter name to search:");
-        searchLabel.setBounds(50, 50, 200, 30);
-        add(searchLabel);
-
-        JTextField searchField = new JTextField();
-        searchField.setBounds(250, 50, 200, 30);
-        add(searchField);
-
-        JButton searchButton = new JButton("Search");
-        searchButton.setBounds(470, 50, 100, 30);
-        add(searchButton);
-
-        JTextArea resultArea = new JTextArea();
+        JLabel idLabel = new JLabel("Employee ID:");
+        JTextField idField = new JTextField();
+        JButton searchButton = new JButton("Search Employee");
+        JTextArea resultArea = new JTextArea(5, 20);
         resultArea.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(resultArea);
-        scrollPane.setBounds(50, 100, 600, 300);
-        add(scrollPane);
+
+        searchButton.setBackground(new Color(70, 130, 180));
+        searchButton.setForeground(Color.WHITE);
+        searchButton.setFont(new Font("Arial", Font.BOLD, 14));
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        add(idLabel, gbc);
+        gbc.gridx = 1;
+        add(idField, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        add(searchButton, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
+        add(new JScrollPane(resultArea), gbc);
 
         searchButton.addActionListener(e -> {
-            String name = searchField.getText();
-            resultArea.setText("");
-            for (Employee employee : employeeManager.getEmployees()) {
-                if (employee.getName().equalsIgnoreCase(name)) {
-                    resultArea.append("Name: " + employee.getName() +
-                            ", Age: " + employee.getAge() +
-                            ", Department: " + employee.getDepartment() + "\n");
-                }
-            }
-            if (resultArea.getText().isEmpty()) {
-                resultArea.setText("No employee found with the name: " + name);
+            String id = idField.getText();
+            Employee employee = employeeManager.getEmployeeById(id);
+            if (employee != null) {
+                resultArea.setText("Employee Found:\n");
+                resultArea.append("ID: " + employee.getId() + "\n");
+                resultArea.append("Name: " + employee.getName() + "\n");
+                resultArea.append("Age: " + employee.getAge() + "\n");
+                resultArea.append("Department: " + employee.getDepartment());
+            } else {
+                resultArea.setText("Employee not found!");
             }
         });
     }

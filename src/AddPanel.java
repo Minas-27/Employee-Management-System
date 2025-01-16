@@ -3,7 +3,10 @@ import java.awt.*;
 
 public class AddPanel extends JPanel {
     public AddPanel(EmployeeManager employeeManager) {
-        setLayout(new GridLayout(4, 2, 10, 10));
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
         JLabel nameLabel = new JLabel("Name:");
         JTextField nameField = new JTextField();
@@ -13,14 +16,31 @@ public class AddPanel extends JPanel {
         JTextField departmentField = new JTextField();
         JButton addButton = new JButton("Add Employee");
 
-        add(nameLabel);
-        add(nameField);
-        add(ageLabel);
-        add(ageField);
-        add(departmentLabel);
-        add(departmentField);
-        add(new JLabel());
-        add(addButton);
+        addButton.setBackground(new Color(34, 139, 34));
+        addButton.setForeground(Color.WHITE);
+        addButton.setFont(new Font("Arial", Font.BOLD, 14));
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        add(nameLabel, gbc);
+        gbc.gridx = 1;
+        add(nameField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        add(ageLabel, gbc);
+        gbc.gridx = 1;
+        add(ageField, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        add(departmentLabel, gbc);
+        gbc.gridx = 1;
+        add(departmentField, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        add(addButton, gbc);
 
         addButton.addActionListener(e -> {
             String name = nameField.getText();
